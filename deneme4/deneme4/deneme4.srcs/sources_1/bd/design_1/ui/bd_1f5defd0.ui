@@ -1,0 +1,85 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.736157",
+   "Default View_TopLeft":"1614,-12",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_sclk_0 -pg 1 -lvl 10 -x 3290 -y 360 -defaultsOSRD
+preplace port port-id_sdin_0 -pg 1 -lvl 10 -x 3290 -y 380 -defaultsOSRD
+preplace port port-id_sync_n_0 -pg 1 -lvl 10 -x 3290 -y 400 -defaultsOSRD
+preplace port port-id_ldac_n_0 -pg 1 -lvl 10 -x 3290 -y 420 -defaultsOSRD
+preplace port port-id_clr_n_0 -pg 1 -lvl 10 -x 3290 -y 440 -defaultsOSRD
+preplace port port-id_rx_0 -pg 1 -lvl 0 -x -10 -y 290 -defaultsOSRD
+preplace port port-id_clk_in1_0 -pg 1 -lvl 0 -x -10 -y 230 -defaultsOSRD
+preplace port port-id_sclk_1 -pg 1 -lvl 10 -x 3290 -y 130 -defaultsOSRD
+preplace port port-id_sdin_1 -pg 1 -lvl 10 -x 3290 -y 150 -defaultsOSRD
+preplace port port-id_sync_n_1 -pg 1 -lvl 10 -x 3290 -y 170 -defaultsOSRD
+preplace port port-id_ldac_n_1 -pg 1 -lvl 10 -x 3290 -y 190 -defaultsOSRD
+preplace port port-id_clr_n_1 -pg 1 -lvl 10 -x 3290 -y 210 -defaultsOSRD
+preplace port port-id_resetn_0 -pg 1 -lvl 0 -x -10 -y 150 -defaultsOSRD
+preplace inst dds_compiler_0 -pg 1 -lvl 5 -x 1480 -y 310 -defaultsOSRD
+preplace inst axis_scaler_0 -pg 1 -lvl 6 -x 1920 -y 340 -defaultsOSRD
+preplace inst dac_controller_0 -pg 1 -lvl 8 -x 2760 -y 380 -defaultsOSRD
+preplace inst packet_parser_0 -pg 1 -lvl 4 -x 1020 -y 250 -defaultsOSRD
+preplace inst spi_master_ad5791_0 -pg 1 -lvl 9 -x 3120 -y 400 -defaultsOSRD
+preplace inst uartrx_0 -pg 1 -lvl 3 -x 690 -y 270 -defaultsOSRD
+preplace inst axis_data_fifo_0 -pg 1 -lvl 7 -x 2330 -y 360 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 110 -y 220 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 390 -y 190 -defaultsOSRD
+preplace inst dds_compiler_1 -pg 1 -lvl 5 -x 1480 -y 100 -defaultsOSRD
+preplace inst axis_scaler_1 -pg 1 -lvl 6 -x 1920 -y 110 -defaultsOSRD
+preplace inst axis_data_fifo_1 -pg 1 -lvl 7 -x 2330 -y 130 -defaultsOSRD
+preplace inst dac_controller_1 -pg 1 -lvl 8 -x 2760 -y 150 -defaultsOSRD
+preplace inst spi_master_ad5791_1 -pg 1 -lvl 9 -x 3120 -y 170 -defaultsOSRD
+preplace netloc Net 1 1 8 220 90 560 130 810 130 1270 200 1710 220 2150 240 2560 40 2970
+preplace netloc axis_data_fifo_0_m_axis_tdata 1 7 1 N 350
+preplace netloc axis_data_fifo_0_m_axis_tvalid 1 7 1 2570 370n
+preplace netloc axis_data_fifo_0_s_axis_tready 1 6 1 2160 350n
+preplace netloc axis_data_fifo_1_m_axis_tdata 1 7 1 N 120
+preplace netloc axis_data_fifo_1_m_axis_tvalid 1 7 1 2550 140n
+preplace netloc axis_data_fifo_1_s_axis_tready 1 6 1 2130 120n
+preplace netloc axis_scaler_0_m_axis_tdata 1 6 1 N 330
+preplace netloc axis_scaler_0_m_axis_tvalid 1 6 1 2110 350n
+preplace netloc axis_scaler_0_s_axis_tready 1 5 1 1690 320n
+preplace netloc axis_scaler_1_m_axis_tdata 1 6 1 N 100
+preplace netloc axis_scaler_1_m_axis_tvalid 1 6 1 2120 120n
+preplace netloc axis_scaler_1_s_axis_tready 1 5 1 1710 110n
+preplace netloc clk_in1_0_1 1 0 1 NJ 230
+preplace netloc clk_wiz_0_locked 1 1 1 N 230
+preplace netloc dac_controller_0_m_axis_tdata 1 8 1 N 370
+preplace netloc dac_controller_0_m_axis_tvalid 1 8 1 N 390
+preplace netloc dac_controller_0_s_axis_tready 1 7 1 2500 370n
+preplace netloc dac_controller_1_m_axis_tdata 1 8 1 N 140
+preplace netloc dac_controller_1_m_axis_tvalid 1 8 1 N 160
+preplace netloc dac_controller_1_s_axis_tready 1 7 1 2540 140n
+preplace netloc dds_compiler_0_m_axis_data_tdata 1 5 1 1690 300n
+preplace netloc dds_compiler_0_m_axis_data_tvalid 1 5 1 1730 330n
+preplace netloc dds_compiler_1_m_axis_data_tdata 1 5 1 1700 80n
+preplace netloc dds_compiler_1_m_axis_data_tvalid 1 5 1 1700 100n
+preplace netloc packet_parser_0_m_axis_dds2_config_tdata 1 4 1 1220 80n
+preplace netloc packet_parser_0_m_axis_dds2_config_tvalid 1 4 1 1250 100n
+preplace netloc packet_parser_0_m_axis_dds_config_tdata 1 4 1 1260 220n
+preplace netloc packet_parser_0_m_axis_dds_config_tvalid 1 4 1 1230 240n
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 2 7 570 190 820 140 1240 210 1720 230 2140 250 2530 30 2980
+preplace netloc resetn_0_1 1 0 2 20 150 200
+preplace netloc rx_0_1 1 0 3 NJ 290 NJ 290 NJ
+preplace netloc spi_master_ad5791_0_clr_n 1 9 1 NJ 440
+preplace netloc spi_master_ad5791_0_ldac_n 1 9 1 NJ 420
+preplace netloc spi_master_ad5791_0_s_axis_tready 1 8 1 N 410
+preplace netloc spi_master_ad5791_0_sclk 1 9 1 NJ 360
+preplace netloc spi_master_ad5791_0_sdin 1 9 1 NJ 380
+preplace netloc spi_master_ad5791_0_sync_n 1 9 1 NJ 400
+preplace netloc spi_master_ad5791_1_clr_n 1 9 1 NJ 210
+preplace netloc spi_master_ad5791_1_ldac_n 1 9 1 NJ 190
+preplace netloc spi_master_ad5791_1_s_axis_tready 1 8 1 N 180
+preplace netloc spi_master_ad5791_1_sclk 1 9 1 NJ 130
+preplace netloc spi_master_ad5791_1_sdin 1 9 1 NJ 150
+preplace netloc spi_master_ad5791_1_sync_n 1 9 1 NJ 170
+preplace netloc uartrx_0_data_out 1 3 1 N 260
+preplace netloc uartrx_0_valid 1 3 1 N 280
+levelinfo -pg 1 -10 110 390 690 1020 1480 1920 2330 2760 3120 3290
+pagesize -pg 1 -db -bbox -sgen -130 0 3400 510
+"
+}
+0

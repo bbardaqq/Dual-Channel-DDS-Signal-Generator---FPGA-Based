@@ -1,0 +1,125 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Thu Jan  8 14:25:40 2026
+| Host         : UME-B00848 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+| Design       : design_1_wrapper
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    47 |
+|    Minimum number of control sets                        |    47 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   150 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    47 |
+| >= 0 to < 4        |     8 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |     7 |
+| >= 8 to < 10       |     3 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    25 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             294 |           51 |
+| No           | No                    | Yes                    |              10 |            3 |
+| No           | Yes                   | No                     |              63 |           20 |
+| Yes          | No                    | No                     |             398 |           80 |
+| Yes          | No                    | Yes                    |              34 |           14 |
+| Yes          | Yes                   | No                     |             363 |           85 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------------+--------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|             Clock Signal            |                                           Enable Signal                                          |                                             Set/Reset Signal                                            | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------------------+--------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/spi_master_ad5791_1/inst/sync_n_i_1_n_0                                               | design_1_i/spi_master_ad5791_1/inst/s_axis_tready_i_2_n_0                                               |                1 |              1 |         1.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/spi_master_ad5791_1/inst/ldac_n_i_1_n_0                                               | design_1_i/spi_master_ad5791_1/inst/s_axis_tready_i_2_n_0                                               |                1 |              1 |         1.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/spi_master_ad5791_0/inst/ldac_n_i_1_n_0                                               | design_1_i/spi_master_ad5791_0/inst/s_axis_tready_i_2_n_0                                               |                1 |              1 |         1.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/spi_master_ad5791_0/inst/sync_n_i_1_n_0                                               | design_1_i/spi_master_ad5791_0/inst/s_axis_tready_i_2_n_0                                               |                1 |              1 |         1.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                                  | design_1_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/rst_i |                1 |              3 |         3.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                                  | design_1_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/rst_i |                1 |              3 |         3.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/dac_controller_0/inst/FSM_onehot_state[0]_i_1_n_0                                     | design_1_i/dac_controller_0/inst/FSM_onehot_state[0]_i_2_n_0                                            |                1 |              3 |         3.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/dac_controller_1/inst/FSM_onehot_state[0]_i_1_n_0                                     | design_1_i/dac_controller_1/inst/FSM_onehot_state[0]_i_2_n_0                                            |                1 |              3 |         3.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                                  | design_1_i/proc_sys_reset_0/U0/EXT_LPF/lpf_int                                                          |                1 |              4 |         4.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                                  | design_1_i/spi_master_ad5791_0/inst/s_axis_tready_i_2_n_0                                               |                1 |              5 |         5.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                                  | design_1_i/spi_master_ad5791_1/inst/s_axis_tready_i_2_n_0                                               |                2 |              5 |         2.50 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                                  | design_1_i/uartrx_0/inst/data_out[7]_i_1_n_0                                                            |                2 |              5 |         2.50 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/proc_sys_reset_0/U0/SEQ/seq_cnt_en                                                    | design_1_i/proc_sys_reset_0/U0/SEQ/SEQ_COUNTER/clear                                                    |                1 |              6 |         6.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/spi_master_ad5791_1/inst/sdin_i_1_n_0                                                 | design_1_i/spi_master_ad5791_1/inst/s_axis_tready_i_2_n_0                                               |                2 |              6 |         3.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/spi_master_ad5791_1/inst/FSM_onehot_state[5]_i_1_n_0                                  | design_1_i/spi_master_ad5791_1/inst/s_axis_tready_i_2_n_0                                               |                2 |              6 |         3.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/spi_master_ad5791_0/inst/sdin_i_1_n_0                                                 | design_1_i/spi_master_ad5791_0/inst/s_axis_tready_i_2_n_0                                               |                2 |              6 |         3.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/spi_master_ad5791_0/inst/FSM_onehot_state[5]_i_1_n_0                                  | design_1_i/spi_master_ad5791_0/inst/s_axis_tready_i_2_n_0                                               |                2 |              6 |         3.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                                  | design_1_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                3 |              7 |         2.33 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                                  | design_1_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                2 |              7 |         3.50 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/uartrx_0/inst/data_out[7]_i_2_n_0                                                     | design_1_i/uartrx_0/inst/data_out[7]_i_1_n_0                                                            |                1 |              8 |         8.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/uartrx_0/inst/shift_reg                                                               | design_1_i/uartrx_0/inst/data_out[7]_i_1_n_0                                                            |                2 |              8 |         4.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/packet_parser_0/inst/cmd_reg[7]_i_1_n_0                                               | design_1_i/packet_parser_0/inst/phase_reg_ch1[31]_i_1_n_0                                               |                2 |              8 |         4.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/uartrx_0/inst/counter                                                                 | design_1_i/uartrx_0/inst/data_out[7]_i_1_n_0                                                            |                5 |             16 |         3.20 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                                  | design_1_i/dds_compiler_1/U0/i_synth/sclr_i                                                             |                5 |             17 |         3.40 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                                  | design_1_i/dds_compiler_0/U0/i_synth/sclr_i                                                             |                5 |             17 |         3.40 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rst_d1_inst/E[0] | design_1_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                4 |             18 |         4.50 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/E[0]  | design_1_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                5 |             18 |         3.60 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rst_d1_inst/E[0] | design_1_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                5 |             18 |         3.60 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/E[0]  | design_1_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                4 |             18 |         4.50 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/dds_compiler_0/U0/i_synth/has_m_data.i_has_tready.m_data_fifo/fifo0/rd_enable         |                                                                                                         |                3 |             20 |         6.67 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/dds_compiler_1/U0/i_synth/has_m_data.i_has_tready.m_data_fifo/fifo0/rd_enable         |                                                                                                         |                3 |             20 |         6.67 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/dds_compiler_1/U0/i_synth/has_s_phase.ce_i_delay/wr_enable                            |                                                                                                         |                3 |             20 |         6.67 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/dds_compiler_0/U0/i_synth/has_s_phase.ce_i_delay/wr_enable                            |                                                                                                         |                3 |             20 |         6.67 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/spi_master_ad5791_0/inst/shift_reg[21]_i_1_n_0                                        |                                                                                                         |                6 |             22 |         3.67 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/spi_master_ad5791_1/inst/shift_reg[21]_i_1_n_0                                        |                                                                                                         |                5 |             22 |         4.40 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/packet_parser_0/inst/freq_reg_ch2[31]_i_1_n_0                                         | design_1_i/packet_parser_0/inst/phase_reg_ch1[31]_i_1_n_0                                               |                7 |             32 |         4.57 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/packet_parser_0/inst/phase_reg_ch2[31]_i_1_n_0                                        | design_1_i/packet_parser_0/inst/phase_reg_ch1[31]_i_1_n_0                                               |                7 |             32 |         4.57 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/packet_parser_0/inst/phase_reg_ch1[31]_i_2_n_0                                        | design_1_i/packet_parser_0/inst/phase_reg_ch1[31]_i_1_n_0                                               |                7 |             32 |         4.57 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/packet_parser_0/inst/freq_reg_ch1[31]_i_1_n_0                                         | design_1_i/packet_parser_0/inst/phase_reg_ch1[31]_i_1_n_0                                               |                7 |             32 |         4.57 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/packet_parser_0/inst/byte_cnt[2]_i_1_n_0                                              | design_1_i/packet_parser_0/inst/phase_reg_ch1[31]_i_1_n_0                                               |                7 |             35 |         5.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/dds_compiler_0/U0/i_synth/has_s_phase.ce_i_delay/ce_core                              | design_1_i/dds_compiler_0/U0/i_synth/sclr_i                                                             |               10 |             41 |         4.10 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/dds_compiler_1/U0/i_synth/has_s_phase.ce_i_delay/ce_core                              | design_1_i/dds_compiler_1/U0/i_synth/sclr_i                                                             |               11 |             41 |         3.73 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/dds_compiler_0/U0/i_synth/has_s_phase.i_with_tready.s_phase_fifo/wr_enable            |                                                                                                         |                8 |             64 |         8.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/dds_compiler_1/U0/i_synth/has_s_phase.i_with_tready.s_phase_fifo/wr_enable            |                                                                                                         |                8 |             64 |         8.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/dds_compiler_0/U0/i_synth/has_s_phase.ce_i_delay/ce_core                              |                                                                                                         |               33 |            157 |         4.76 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/dds_compiler_1/U0/i_synth/has_s_phase.ce_i_delay/ce_core                              |                                                                                                         |               30 |            157 |         5.23 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 |                                                                                                  |                                                                                                         |               52 |            295 |         5.67 |
++-------------------------------------+--------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

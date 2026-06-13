@@ -1,0 +1,28 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../deneme4.gen/sources_1/bd/design_1/ipshared/434f/hdl" --include "../../../../deneme4.gen/sources_1/bd/design_1/ipshared/c2c6" \
+"../../../../deneme4.srcs/sources_1/new/axis_scaler.v" \
+"../../../../deneme4.srcs/sources_1/new/dac_controller.v" \
+"../../../../deneme4.srcs/sources_1/new/packet_parser.v" \
+"../../../../deneme4.srcs/sources_1/new/spi_master_ad5791.v" \
+"../../../../deneme4.srcs/sources_1/new/uartrx.v" \
+"../../../../deneme4.ip_user_files/bd/design_1/ip/design_1_axis_scaler_0_0/sim/design_1_axis_scaler_0_0.v" \
+"../../../../deneme4.ip_user_files/bd/design_1/ip/design_1_dac_controller_0_0/sim/design_1_dac_controller_0_0.v" \
+"../../../../deneme4.ip_user_files/bd/design_1/ip/design_1_packet_parser_0_0/sim/design_1_packet_parser_0_0.v" \
+"../../../../deneme4.ip_user_files/bd/design_1/ip/design_1_spi_master_ad5791_0_0/sim/design_1_spi_master_ad5791_0_0.v" \
+"../../../../deneme4.ip_user_files/bd/design_1/ip/design_1_uartrx_0_0/sim/design_1_uartrx_0_0.v" \
+"../../../../deneme4.ip_user_files/bd/design_1/ip/design_1_axis_data_fifo_0_0/sim/design_1_axis_data_fifo_0_0.v" \
+"../../../../deneme4.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" \
+"../../../../deneme4.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v" \
+"../../../../deneme4.ip_user_files/bd/design_1/ip/design_1_axis_scaler_1_0/sim/design_1_axis_scaler_1_0.v" \
+"../../../../deneme4.ip_user_files/bd/design_1/ip/design_1_axis_data_fifo_1_0/sim/design_1_axis_data_fifo_1_0.v" \
+"../../../../deneme4.ip_user_files/bd/design_1/ip/design_1_dac_controller_1_0/sim/design_1_dac_controller_1_0.v" \
+"../../../../deneme4.ip_user_files/bd/design_1/ip/design_1_spi_master_ad5791_1_0/sim/design_1_spi_master_ad5791_1_0.v" \
+"../../../../deneme4.ip_user_files/bd/design_1/sim/design_1.v" \
+"../../../../deneme4.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v" \
+"../../../../deneme4.srcs/sim_1/new/tb_system_sim.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
