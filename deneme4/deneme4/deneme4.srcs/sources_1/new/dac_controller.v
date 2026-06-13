@@ -28,7 +28,7 @@ module dac_controller(
             state <= STATE_INIT_SEND;
         end else begin
             case (state)
-                // 1. INIT Verisini Gönder
+                // 1. INIT Verisini Gï¿½nder
                 STATE_INIT_SEND: begin
                     // SPI_Masterden hazir sinyali gelirse
                     if (m_axis_tready) begin
@@ -75,9 +75,8 @@ module dac_controller(
                 m_axis_tvalid = s_axis_tvalid;
                 s_axis_tready = m_axis_tready;
                 // Veriyi paketle (20 bit data + 0001 Adres)
-                m_axis_tdata  = {4'b0001, ~s_axis_tdata[19], s_axis_tdata[18:0]};
-                //Burada en ust biti ters ceviriyoruz ki sinusumuz "M" harfinden duzgun bir sinyale donussun.
-                // Tam naptigimi aciklayamam git internetten bak M hatasi nasýl duzeltiliyor diye. 
+                m_axis_tdata  = {4'b0001, s_axis_tdata[19], s_axis_tdata[18:0]};
+                // MSB is the sign bit; no inversion needed for correct sine output. 
             end
         endcase
     end

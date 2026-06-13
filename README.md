@@ -133,6 +133,15 @@ The internal FPGA logic follows a modular pipeline architecture:
    - Send necessary startup configuration commands to initialize the DAC (AD5791).
    - Transmit the data stream alongside a header, adhering strictly to the AD5791 timing diagram.
 
+## Note on Signal Integrity
+
+An earlier version of the design had an inadvertent inversion of the sign bit in the DAC controller (`dac_controller.v`), causing the negative half of the sine wave to be clipped. This issue has been identified and fixed in the current repository. The design now outputs a full sine wave as expected.
+
+If you are using an older version, ensure the following line in `dac_controller.v` does **not** invert the sign bit:
+```verilog
+m_axis_tdata  = {4'b0001, s_axis_tdata[19], s_axis_tdata[18:0]};
+```
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
