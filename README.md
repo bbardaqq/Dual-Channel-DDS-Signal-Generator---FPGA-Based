@@ -1,4 +1,4 @@
-# Dual-Channel DDS Signal Generator (FPGA-Based)
+# Dual-Channel DDS Signal Generator (FPGA-Based).
 
 This project implements a high-precision Dual Channel Direct Digital Synthesis (DDS) system on a Xilinx Artix-7 FPGA (Nexys A7-100T development board). The system generates two independent sine wave outputs with precise frequency, phase, and amplitude control via a UART interface.
 
